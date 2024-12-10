@@ -25,6 +25,17 @@ document.addEventListener('DOMContentLoaded', () => {   //LOGIN
   } else {
     console.error('Logout div nicht gefunden!');
   }
+
+  const dateDiv = document.getElementById('dateDive');
+  if (dateDiv) {
+    dateDiv.addEventListener('click', function(){
+      window.location.href = 'https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=167&ct=1733815242&rver=7.5.2211.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fnlp%3d1%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26culture%3den-us%26country%3dus%26RpsCsrfState%3da1353540-ceb9-b5b2-f6fb-437f2b14a1de&id=292841&aadredir=1&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c';
+    });
+  }
+  else {
+    console.error('Date Div nicht gefunden!');
+  }
+  
 });
 
 function padWithZero(num: number): string {
